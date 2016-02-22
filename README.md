@@ -18,7 +18,7 @@ Properties
 
 The EndlessTableView has the following properties (note: for iOS, UITableView when using properties):
 
-    @property(nonatomic)BOOL enableEndlessScrolling 
+    @property (nonatomic) BOOL enableEndlessScrolling 
 
 The default value is YES.
 
@@ -30,11 +30,11 @@ The default value is NO.
 
 This property can be used to set the table scrolling at a constant speed. A value of 1.0 would scroll the carousel forwards at a rate of one item per second. The autoscroll value can be positive or negative and defaults to 0.0 (stationary). Autoscrolling will stop if the user interacts with the table, and will resume when they stop. The default value is 0.0f.
 
-    @property(nonatomic)CGFloat differenceRateValue;
+    @property (nonatomic) CGFloat differenceRateValue;
 
 If attachedTableView and contentSize of this event of an equal, differenceRateValue processing are taken. The default value is 1.0f.
 
-    @property(nonatomic,weak) EndlessTableView *attachedTableView;
+    @property (nonatomic,weak) EndlessTableView *attachedTableView;
 
 The default value is nil.
 
@@ -42,7 +42,6 @@ The default value is nil.
 How to use ?
 ----------
 
-----
 ![Visual4](http://g.recordit.co/ykx1SbnAmZ.gif)
 ----
 
@@ -70,7 +69,9 @@ self.tableViewProduct.differenceRateValue = 1.3f;
 
 OR
 
-```
+```Objective-C
+#import "EndlessTableView.h"
+
 - (void)loadView
 {
 [super loadView];
@@ -88,5 +89,6 @@ tableViewProduct.enableAutoScrolling = YES;
 tableViewProduct.differenceRateValue = 1.3f;
 
 }
+```
 
 Build and run the project files. Enjoy more examples!
