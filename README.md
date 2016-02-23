@@ -125,10 +125,12 @@ OR
 [super loadView];
 
 EndlessTableView *tableViewCampaign = [[EndlessTableView alloc]initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width / 2, 0.0f, [UIScreen mainScreen].bounds.size.width / 2, [UIScreen mainScreen].bounds.size.height)];
+tableViewCampaign.tag = 0;
 tableViewCampaign.dataSource = self;
 tableViewCampaign.delegate = self;
 
 EndlessTableView *tableViewProduct = [[EndlessTableView alloc]initWithFrame:CGRectMake(0.0f, 0.0f, [UIScreen mainScreen].bounds.size.width / 2, [UIScreen mainScreen].bounds.size.height)];
+tableViewProduct.tag = 1;
 tableViewProduct.dataSource = self;
 tableViewProduct.delegate = self;
 
@@ -147,9 +149,9 @@ tableViewProduct.differenceRateValue = 1.3f;
 
 NSInteger numberOfRows = 0;
 
-if (tableView == _tableViewCampaign)
+if (tableView.tag == 0) // Campaign TableView
 numberOfRows = 10;
-else if (tableView == _tableViewProduct)
+else if (tableView.tag == 1) // Product TableView
 numberOfRows = 8;
 
 return numberOfRows;
@@ -161,11 +163,11 @@ return numberOfRows;
 
 UITableViewCell *cell =  [tableView dequeueReusableCellWithIdentifier:@"EndlessTableViewCell"];
 
-if (tableView == _tableViewCampaign)
+if (tableView.tag == 0) // Campaign TableView
 {
 
 }
-else if (tableView == _tableViewProduct)
+else if (tableView.tag == 1) // Product TableView
 {
 
 }
