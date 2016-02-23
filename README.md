@@ -47,10 +47,13 @@ How to use ?
 
 ```Objective-C
 #import "EndlessTableView.h"
-...
+
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet EndlessTableView *tableViewProduct;
 @property (weak, nonatomic) IBOutlet EndlessTableView *tableViewCampaign;
+
+...
 
 - (void)loadView
 {
@@ -65,12 +68,57 @@ self.tableViewProduct.differenceRateValue = 1.3f;
 [_tableViewCampaign reloadData];
 
 }
+
+...
+
+#pragma mark - TableView Datasource & Delegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+
+NSInteger numberOfRows = 0;
+
+if (tableView == _tableViewCampaign)
+numberOfRows = 10;
+else if (tableView == _tableViewProduct)
+numberOfRows = 8;
+
+return numberOfRows;
+
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+UITableViewCell *cell =  [tableView dequeueReusableCellWithIdentifier:@"EndlessTableViewCell"];
+
+if (tableView == _tableViewCampaign)
+{
+
+}
+else if (tableView == _tableViewProduct)
+{
+
+}
+return cell;
+
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+}
+
 ```
 
 OR
 
 ```Objective-C
 #import "EndlessTableView.h"
+
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+
+...
 
 - (void)loadView
 {
@@ -89,6 +137,47 @@ tableViewProduct.enableAutoScrolling = YES;
 tableViewProduct.differenceRateValue = 1.3f;
 
 }
+
+...
+
+#pragma mark - TableView Datasource & Delegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+
+NSInteger numberOfRows = 0;
+
+if (tableView == _tableViewCampaign)
+numberOfRows = 10;
+else if (tableView == _tableViewProduct)
+numberOfRows = 8;
+
+return numberOfRows;
+
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+UITableViewCell *cell =  [tableView dequeueReusableCellWithIdentifier:@"EndlessTableViewCell"];
+
+if (tableView == _tableViewCampaign)
+{
+
+}
+else if (tableView == _tableViewProduct)
+{
+
+}
+return cell;
+
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+}
+
 ```
 
 Build and run the project files. Enjoy more examples!
