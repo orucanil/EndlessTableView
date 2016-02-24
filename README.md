@@ -3,7 +3,7 @@
 Endless - Infinite &amp; Double Table Together Parallax Animation &amp; Auto Scrolling
 
 
-## Display Type Visual Examples 
+## Display Visual Examples 
 
 ----
 ![Visual1](http://g.recordit.co/DhtE6kevrL.gif)
@@ -12,6 +12,11 @@ Endless - Infinite &amp; Double Table Together Parallax Animation &amp; Auto Scr
 ----
 ![Visual3](http://g.recordit.co/uCKOF0zCbd.gif)
 
+
+Installation
+--------------
+
+To use the EndlessTableView class in an app, just drag the EndlessTableView class files (demo files and assets are not needed) into your project.
 
 Properties
 --------------
