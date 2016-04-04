@@ -6,11 +6,8 @@ Endless - Infinite &amp; Double Table Together Parallax Animation &amp; Auto Scr
 ## Display Visual Examples 
 
 ----
-![Visual1](http://g.recordit.co/DhtE6kevrL.gif)
+![Visual1](http://g.recordit.co/KXg4X6QNYN.gif)
 ----
-![Visual2](http://g.recordit.co/mmMIbsPLCR.gif)
-----
-![Visual3](http://g.recordit.co/uCKOF0zCbd.gif)
 
 
 Installation
